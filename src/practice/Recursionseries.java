@@ -1,5 +1,7 @@
 package practice;
 
+import java.util.Arrays;
+
 public class Recursionseries {
     int count=0;
     void recursionExample(){
@@ -59,13 +61,37 @@ void NToone(int i,int n){
 
     System.out.println(i);
 
+
+
 }
+//reversing using the recursion using 1 two variable
+    void swap(int arr[],int start,int end){
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+
+    }
+
+    int[] reverseRec(int[] arr,int start,int end){
+
+        if(start>=end){
+            return arr;
+        }
+        swap(arr,start,end);
+        return reverseRec(arr,start+1,end-1);
+    }
+
+
+
+
     public static void main(String[] args){
         Recursionseries rec1=new Recursionseries();
        // rec1.recursionExample();
         //rec1. nameNtimesrec(1,10);
        //rec1. oneToN(10,10);
-        rec1. NToone(1,10);
+       // rec1. NToone(1,10);
+        int[] array={1,2,3,4,5};
+        System.out.print(Arrays.toString(rec1.reverseRec(array,0,4)));
 
 
     }
