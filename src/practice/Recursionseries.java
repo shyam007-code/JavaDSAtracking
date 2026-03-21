@@ -81,6 +81,37 @@ void NToone(int i,int n){
         return reverseRec(arr,start+1,end-1);
     }
 
+    //Multiple recursion in fibonacci series .
+
+    int fibo(int num){
+        if(num<=1){
+
+            return num;
+        }
+
+
+        return (fibo(num-2)+fibo(num-1));
+    }
+    //Another efficient method for this fibonacci
+     int fibo_1(int n){
+        int a=0;
+        int b=1;
+
+        for(int i=0 ;i<n;i++){
+            System.out.println(a);
+            int c=a+b;
+            a=b;
+            b=c;
+
+
+
+        }
+         return a;
+
+
+     }
+
+
 
 
 
@@ -90,8 +121,9 @@ void NToone(int i,int n){
         //rec1. nameNtimesrec(1,10);
        //rec1. oneToN(10,10);
        // rec1. NToone(1,10);
-        int[] array={1,2,3,4,5};
-        System.out.print(Arrays.toString(rec1.reverseRec(array,0,4)));
+//        int[] array={1,2,3,4,5};
+//        System.out.print(Arrays.toString(rec1.reverseRec(array,0,4)));
+        System.out.print(rec1.fibo_1(10));
 
 
     }
